@@ -9,6 +9,7 @@ set -e
 dnf copr enable alebastr/waybar -y
 dnf install waybar -y
 dnf install sway waybar kitty -y
+dnf install neofetch -y
 
 foldername=$(date +%Y%m%d%_H%M)
 backupname="~/.config/bkp_${foldername}"
@@ -33,7 +34,11 @@ for i in $(ls ./config/ ) ; do
   ln -s "${PWD}/config/${i}" "~/.config/."
 done
 
-
 for i in $(ls ./config/ ) ; do
   head "${PWD}/config/${i}" "~/.config/${i}/*"
 done
+
+sway --version
+waybar --version
+kitty --version
+neofetch
