@@ -35,7 +35,7 @@ for i in $(ls ./config/ ) ; do
 done
 
 for i in $(ls ./config/ ) ; do
-  head "${PWD}/config/${i}" "~/.config/${i}/*"
+  head "~/.config/${i}/"*
 done
 
 sway --version
