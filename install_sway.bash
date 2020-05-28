@@ -28,3 +28,7 @@ else
   echo "Saved the former conflicting dotfiles in: "
   echo "----->>>>>>>>" "${backupname}"
 fi
+
+for i in $(ls ./config/ ) ; do
+  ln -s "${PWD}/${i}" "~/.config/."
+done
