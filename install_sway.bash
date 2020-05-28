@@ -30,5 +30,10 @@ else
 fi
 
 for i in $(ls ./config/ ) ; do
-  ln -s "${PWD}/${i}" "~/.config/."
+  ln -s "${PWD}/config/${i}" "~/.config/."
+done
+
+
+for i in $(ls ./config/ ) ; do
+  head "${PWD}/config/${i}" "~/.config/${i}/*"
 done
