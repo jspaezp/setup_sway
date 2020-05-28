@@ -18,7 +18,7 @@ foldername=$(date +%Y%m%d%_H%M)
 backupname="~/.config/bkp_${foldername}"
 mkdir -p "${backupname}"
 
-space
+$( set +x ; space )
 
 for configdir in ~/.config/sway ~/.config/kitty ~/.config/waybar; do
   if [ -d "${configdir}"]; then
@@ -26,29 +26,35 @@ for configdir in ~/.config/sway ~/.config/kitty ~/.config/waybar; do
   fi
 done
 
-space
+$( set +x ; space )
 
 for i in $(ls ./config/ ) ; do
   ln -s "${PWD}/config/${i}" "~/.config/."
 done
 
-space
+$( set +x ; space )
 
 for i in $(ls ./config/ ) ; do
   head "~/.config/${i}/"*
 done
 
-space
+$( set +x ; space )
+
+wofi --version
+pcmanfm --version
+pavucontrol --version
+
+$( set +x ; space )
 
 sway --version
 waybar --version
 kitty --version
 
-space 
+$( set +x ; space )
 
 neofetch
 
-space
+$( set +x ; space )
 
 # Remove the temporary folder if it is empty, else let the user know where it is
 if [ -z "$(ls -A ${backupname} )" ]; then
