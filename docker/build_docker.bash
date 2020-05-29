@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
 # This script is supposed to test in a dockerized environment
 # if the installation of sway would work in a new fedora install

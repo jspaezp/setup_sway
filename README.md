@@ -19,12 +19,17 @@ system.
 
 ```
 
-git clone ...
-cd ...
-sudo bash install_sway.bash
+git clone https://github.com/jspaezp/setup_sway
+cd setup_sway
+sudo zsh install_sway.bash
 
 ```
 
 ## Author
 
 - J. Sebastian Paez
+
+### Known issues
+
+1. The blurry screenshot updates when running the script on a temrinal but
+   not when it runs via swaylock automatically
