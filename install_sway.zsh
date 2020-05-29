@@ -71,6 +71,9 @@ simlink () {
   for i in $(ls ./config/ ) ; do
     ln --verbose -s "${PWD}"/config/"${i}" ~/.config/.
   done
+
+  mkdir -p "${HOME}/Pictures"
+  ln --verbose -s "${PWD}"/assets/BW_ROSIE2.jpg "${HOME}/."
 }
 
 # Prints the head of the files in the simlinked config directories
