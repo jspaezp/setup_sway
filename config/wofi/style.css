@@ -1,0 +1,47 @@
+window {
+  border: 12px solid #222222;
+  background-color: #222222;
+}
+
+#input {
+  margin: 10px;
+  background-color: #cccccc;
+}
+
+#inner-box {
+  margin: 1px;
+  background-color: #333333;
+}
+
+#outer-box {
+  border: 15px solid #333333;
+  margin: 5px solid #333333;
+  background-color: #333333;
+}
+
+#scroll {
+  margin: 4px;
+  background-color: #333333;
+}
+
+#text {
+  margin: 10px;
+  font-family: Deja Vu Sans;
+  font-size: 14;
+  color: #eeeeee;
+} 
+
+#selected {
+  background-color: #666666;
+} 
+
+#entry.selected {
+  margin: 5px;
+  border: 2px solid #222222;
+  background-color: #666666;
+} 
+
+#text.selected {
+  border: 2px solid #222222;
+  background-color: #666666;
+} 

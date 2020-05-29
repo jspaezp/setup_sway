@@ -1,5 +1,4 @@
 
-
 # Setting up sway
 
 ## Intro and motivation
