@@ -21,8 +21,26 @@ system.
 
 git clone https://github.com/jspaezp/setup_sway
 cd setup_sway
+
+## on newer fedora installs, this is required
+# dnf install 'dnf-command(copr)'
+
 sudo zsh install_sway.bash
 
+```
+
+## Testing
+
+A dockerized container  has been generated to test that the script actually 
+runs, right now it does not test that it does it correctly but it does the
+check that it completes.
+
+Note that this tests the version on the github repository, not the local one
+
+```
+git clone https://github.com/jspaezp/setup_sway
+cd setup_sway/docker
+zsh build_docker.zsh
 ```
 
 ## Author
