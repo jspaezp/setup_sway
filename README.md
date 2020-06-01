@@ -24,8 +24,10 @@ cd setup_sway
 ## on newer fedora installs, this is required
 # dnf install 'dnf-command(copr)'
 
-sudo zsh install_sway.bash
+sudo zsh install_sway.zsh -d
+# This will be a dry run, make sure it all would work ...
 
+sudo zsh install_sway.zsh -r
 ```
 
 ## Testing
