@@ -51,7 +51,8 @@ installs () {
   sudo dnf install sway waybar kitty -y
   sudo dnf install neofetch -y
 
-  sudo dnf install swaylock pavucontrol fontawesome-fonts pcmanfm wofi -y
+  sudo dnf install swaylock pavucontrol fontawesome-fonts pcmanfm \
+    wofi girm imagemagick -y
 }
 
 # Function that backs up the config files
@@ -74,6 +75,9 @@ simlink () {
 
   mkdir -p "${HOME}/Pictures"
   ln --verbose -s "${PWD}"/assets/BW_ROSIE2.jpg "${HOME}/."
+
+  mkdir -p "${HOME}/scripts"
+  ln --verbose -s "${PWD}"/scripts/blurry_sc.zsh "${HOME}/."
 }
 
 # Prints the head of the files in the simlinked config directories
@@ -88,6 +92,12 @@ print_results () {
   space 2
 
   section_header "Versions of the packages installed" 1
+
+  # Screenshot utility
+  grim -h
+
+  # Imagemagick, used for the blurry screenshot util
+  convert --version
 
   echo "wofi version: $(wofi --version)"
   # For some reason pcmanfm does not have a --version argument

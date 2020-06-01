@@ -38,10 +38,10 @@ output * bg $HOME/Pictures/BW_ROSIE2.jpg fill
 # Example configuration:
 #
     exec swayidle -w \
-             timeout 300 "swaylock -f -i $(${HOME}/bin/blurry_sc.bash)" \
+             timeout 300 "swaylock -f -i $(zsh ${HOME}/scripts/blurry_sc.zsh)" \
              timeout 600 'swaymsg "output * dpms off"' \
                   resume 'swaymsg "output * dpms on"' \
-             before-sleep "swaylock -f -i $(${HOME}/bin/blurry_sc.bash)"
+             before-sleep "swaylock -f -i $(zsh ${HOME}/scripts/blurry_sc.zsh)"
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
